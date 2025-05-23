@@ -1,0 +1,110 @@
+.quizzes-page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 16px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+.quizzes-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+.quizzes-header h2 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+.quizzes-search {
+  display: flex;
+  align-items: center;
+  background: #f0f2f5;
+  border-radius: 8px;
+  padding: 4px 10px;
+  gap: 6px;
+}
+.quizzes-search input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 1rem;
+  padding: 6px 0;
+}
+.quizzes-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+.quiz-card {
+  background: #f8fafd;
+  border-radius: 10px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.04);
+  padding: 20px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: box-shadow 0.2s;
+}
+.quiz-card:hover {
+  box-shadow: 0 4px 18px rgba(0,123,255,0.08);
+}
+.quiz-card-header {
+  display: flex;
+  align-items: center;
+  font-size: 1.18rem;
+  font-weight: 600;
+  gap: 8px;
+}
+.quiz-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 0.97rem;
+  color: #444;
+}
+.quiz-points {
+  font-weight: 500;
+  color: #007bff;
+}
+.quiz-attempted {
+  color: #28a745;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.quiz-not-attempted {
+  color: #888;
+}
+.quiz-take-btn {
+  margin-top: 8px;
+  padding: 8px 16px;
+  background: linear-gradient(90deg, #007bff 60%, #00c6ff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.quiz-take-btn:hover {
+  background: linear-gradient(90deg, #0056b3 60%, #00aaff 100%);
+}
+.no-quizzes {
+  color: #888;
+  font-size: 1.1rem;
+  padding: 32px 0;
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .quizzes-page { padding: 12px 2px; }
+  .quizzes-list { gap: 14px; }
+  .quiz-card { padding: 13px 6px; }
+  .quizzes-header { flex-direction: column; gap: 10px; align-items: flex-start; }
+  .quizzes-header h2 { font-size: 1.2rem; }
+}

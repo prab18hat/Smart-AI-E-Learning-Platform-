@@ -1,0 +1,38 @@
+/* Modern, clean leaderboard styles */
+.quiz-leaderboard-container {
+  max-width: 600px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+  padding: 32px 24px;
+  font-family: inherit;
+}
+.leaderboard-table-wrapper {
+  margin-top: 24px;
+  overflow-x: auto;
+}
+.leaderboard-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.05rem;
+}
+.leaderboard-table th, .leaderboard-table td {
+  padding: 12px 16px;
+  text-align: left;
+}
+.leaderboard-table th {
+  background: #f7f9fc;
+  font-weight: 600;
+}
+.leaderboard-table tr:nth-child(even) {
+  background: #f4f8fb;
+}
+.leaderboard-table tr.highlight-row {
+  background: #e6f7ff !important;
+  font-weight: bold;
+}
+.quiz-error {
+  color: #dc3545;
+  margin-bottom: 16px;
+}
