@@ -127,10 +127,10 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
-For any queries or support, please contact us at [your.email@example.com](mailto:your.email@example.com)
+For any queries or support, please contact us at [your.email@example.com](mailto:prabhatmdi8953@gmail.com)
 
 ---
 
 <p align="center">
-  Made with ❤️ by the Smart AI Learning Team
+  Made with ❤️ by the Smart AI Learning Team Prabhat Mishra
 </p>
