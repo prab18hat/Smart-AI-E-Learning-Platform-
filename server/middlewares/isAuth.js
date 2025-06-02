@@ -1,38 +1,24 @@
-import jwt from "jsonwebtoken";
-import { User } from "../models/User.js";
+import jwt from 'jsonwebtoken';
+import User from '../models/User.js';
 
 export const isAuth = async (req, res, next) => {
     try {
-        const token = req.headers.token;
+        const token = req.header('Authorization')?.replace('Bearer ', '');
 
-        if (!token)
-            return res.status(403).json({
-                message: "Please Login",
-            });
+        if (!token) {
+            return res.status(401).json({ message: 'Authentication required' });
+        }
 
-        const decodedData = jwt.verify(token, process.env.Jwt_Sec);
+        const decoded = jwt.verify(token, process.env.Jwt_Sec);
+        const user = await User.findById(decoded.userId);
 
-        req.user = await User.findById(decodedData._id);
+        if (!user) {
+            return res.status(404).json({ message: 'User not found' });
+        }
 
+        req.user = user;
         next();
     } catch (error) {
-        res.status(500).json({
-            message: "Login First",
-        });
-    }
-};
-
-export const isAdmin = (req, res, next) => {
-    try {
-        if (req.user.role !== "admin")
-            return res.status(403).json({
-                message: "You are not admin",
-            });
-
-        next();
-    } catch (error) {
-        res.status(500).json({
-            message: error.message,
-        });
+        res.status(401).json({ message: 'Invalid token' });
     }
 };
