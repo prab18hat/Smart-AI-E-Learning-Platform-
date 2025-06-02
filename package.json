@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "start": "node server/index.js",
-    "dev": "nodemon server/index.js",
+    "prepare": "cd server && npm install",
+    "start": "cd server && node index.js",
+    "dev": "cd server && nodemon index.js",
     "build": "cd server && npm install",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
