@@ -5,7 +5,18 @@
   "type": "module",
   "scripts": {
     "start": "node index.js",
-    "dev": "nodemon index.js"
+    "dev": "nodemon index.js",
+    "build": "npm install",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=16"
+  },
+  "env": {
+    "production": {
+      "NODE_ENV": "production",
+      "PORT": "5000"
+    }
   },
   "author": "",
   "license": "ISC",
