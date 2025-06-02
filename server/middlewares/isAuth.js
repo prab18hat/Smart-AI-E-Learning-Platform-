@@ -1,11 +1,12 @@
 import jwt from 'jsonwebtoken';
 import { paths } from '../utils/paths.js';
-import User from `${paths.models}/User.js`;
-import { fileURLToPath } from 'url';
-import path from 'path';
+import { importModule } from '../utils/paths.js';
 
-const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+// Import User model dynamically
+let User;
+importModule(`${paths.models}/User.js`).then(module => {
+    User = module.default;
+});
 
 export const isAuth = async (req, res, next) => {
     try {
