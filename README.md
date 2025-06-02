@@ -45,6 +45,63 @@ Welcome to the future of e-learning! The Smart AI Learning Platform is a cutting
 - MongoDB (v5.0 or higher)
 - Redis (v6.0 or higher)
 
+## 🚀 Deployment
+
+### Frontend Deployment (Vercel)
+
+1. Create a Vercel account at https://vercel.com
+2. Install Vercel CLI globally:
+   ```bash
+   npm install -g vercel
+   ```
+3. Navigate to frontend directory and deploy:
+   ```bash
+   cd Frontend
+   vercel
+   ```
+4. Set environment variables in Vercel:
+   - `REACT_APP_API_URL`: Your Render backend URL
+   - `REACT_APP_GOOGLE_RECAPTCHA_KEY`: Your Google reCAPTCHA key
+
+### Backend Deployment (Render)
+
+1. Create a Render account at https://render.com
+2. Create a new Web Service:
+   - Build Command: `npm install`
+   - Start Command: `npm start`
+   - Environment Variables:
+     - `MONGODB_URI`: Your MongoDB connection string
+     - `JWT_SECRET`: Your JWT secret key
+     - `OPENAI_API_KEY`: Your OpenAI API key
+     - `RAZORPAY_KEY`: Your Razorpay key
+     - `RAZORPAY_SECRET`: Your Razorpay secret
+     - `SMTP_HOST`: Your SMTP host
+     - `SMTP_PORT`: Your SMTP port
+     - `SMTP_USER`: Your SMTP user
+     - `SMTP_PASS`: Your SMTP password
+
+### Post-Deployment Steps
+
+1. After both deployments are complete:
+   - Update your frontend's API calls to point to your Render backend URL
+   - Test the full application flow
+   - Monitor both services for any errors
+
+2. Free Tier Limitations:
+   - Vercel: 100 GB/month bandwidth, 100,000 requests/month
+   - Render: 100 hours/month of free compute time
+
+3. Deployment Commands:
+   ```bash
+   # Build frontend
+   cd Frontend
+   npm run build
+
+   # Start backend locally (for testing)
+   cd ../server
+   npm start
+   ```
+
 ### Installation
 
 1. **Clone the repository**
@@ -127,10 +184,18 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📞 Contact
 
+<<<<<<< HEAD
 For any queries or support, please contact us at [your.email@example.com](mailto:coddyculturex@gmail.com)
+=======
+For any queries or support, please contact us at [your.email@example.com](mailto:prabhatmdi8953@gmail.com)
+>>>>>>> 2d4ffe0a024f97d401e0ca5eb099fa118e345d3b
 
 ---
 
 <p align="center">
+<<<<<<< HEAD
   Made with ❤️ by CoddyCulture Team
+=======
+  Made with ❤️ by the Smart AI Learning Team Prabhat Mishra
+>>>>>>> 2d4ffe0a024f97d401e0ca5eb099fa118e345d3b
 </p>
