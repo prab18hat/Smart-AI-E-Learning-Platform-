@@ -1,5 +1,11 @@
 import jwt from 'jsonwebtoken';
-import User from '../models/User.js';
+import { paths } from '../utils/paths.js';
+import User from `${paths.models}/User.js`;
+import { fileURLToPath } from 'url';
+import path from 'path';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export const isAuth = async (req, res, next) => {
     try {

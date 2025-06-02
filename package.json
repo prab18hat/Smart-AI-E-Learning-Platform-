@@ -2,6 +2,7 @@
   "name": "smart-ai-learning-platform",
   "version": "1.0.0",
   "private": true,
+  "type": "module",
   "scripts": {
     "prepare": "cd server && npm install",
     "start": "cd server && node index.js",
@@ -13,5 +14,10 @@
     "axios": "^1.7.7",
     "react-hot-toast": "^2.4.1",
     "uuid": "^10.0.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./server/index.js"
+    }
   }
 }
